@@ -52,6 +52,22 @@ Then install the plugin:
 
 This adds all Mapbox skills and connects the `mapbox`, `mapbox-devkit`, and `mapbox-docs` MCP servers automatically.
 
+### Kimi Plugin (Kimi Code)
+
+This repository includes a Kimi Code plugin manifest (`kimi.plugin.json`) at the repository root, so the repository installs directly as a Kimi Code plugin. No build step is required — Kimi Code loads the skills from the root `skills/` directory:
+
+```
+/plugins install https://github.com/mapbox/mapbox-agent-skills
+```
+
+For local testing, install from a checkout:
+
+```
+kimi -p "/plugins install /absolute/path/to/mapbox-agent-skills"
+```
+
+This adds all Mapbox skills and connects the `mapbox`, `mapbox-devkit`, and `mapbox-docs` MCP servers automatically. Run `npm run validate:kimi-plugin` to verify the manifest stays in sync with the root `.mcp.json`.
+
 ### Skills CLI
 
 Install all Mapbox Agent Skills:
